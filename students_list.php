@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Students</title>
-    <link rel="stylesheet" type ="text/css" href="application.css">
+    <link rel="stylesheet" type ="text/css" href="css/pagestyle.css">
 </head>
 <body>
 <header>

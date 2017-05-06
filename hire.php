@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Students</title>
-    <link rel="stylesheet" type ="text/css" href="application.css">
+    <link rel="stylesheet" type ="text/css" href="css/pagestyle.css">
 </head>
 <body>
 <header>
@@ -19,6 +19,7 @@
 </header>
 <body>
   <form action="hire.php" method="post">
+    <fieldset>
 		Employee's Department: <select name="dept">
 		<option value="1">Math</option>
 		<option value="2">Science</option>
@@ -26,8 +27,10 @@
     <option value="4">Literature</option>
 	</select>
     <br/>
-    First Name:<input type="text" name="fname" id="fname" required><br/>
-    Last Name:<input type="text" name="lname" id="lname" required><br/>
+    <label class="title" for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" required><br/>
+    <label class="title" for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" required><br/>
 		<input type="submit" />
 		</fieldset>
 	</form>
