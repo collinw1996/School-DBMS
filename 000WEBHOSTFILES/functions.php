@@ -1,9 +1,9 @@
 <?php
-  $dbhost  = 'localhost';    // Unlikely to require changing
-  $dbname  = 'id1512554_schooldb';   // Modify these...
-  $dbuser  = 'id1512554_pyun1';   // ...variables according
-  $dbpass  = 'cosc457';   // ...to your installation
-  $appname = "Edu-Solutions"; // ...and preference
+  $dbhost  = 'localhost'; 
+  $dbname  = 'id1512554_schooldb';
+  $dbuser  = 'id1512554_pyun1';
+  $dbpass  = 'cosc457';
+  $appname = "Edu-Solutions";
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   if ($connection->connect_error) die($connection->connect_error);
