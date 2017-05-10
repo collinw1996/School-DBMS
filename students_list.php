@@ -30,7 +30,7 @@
 					<input type="date" name="bdate" id="bdate" required="required"><br />
 					<label class="title" for="parentphone">Parent Phone Number:</label>
 					<input type="text" name="parentphone" id="parentphone" required="required"><br />
-					<label class="title" for="fname">Address:</label>
+					<label class="title" for="address">Address:</label>
 					<input type="text" name="address" id="address" required="required"><br />
 					<label class="title" for="username">Username:</label>
 					<input type="text" name="username" id="username" required="required"><br />
