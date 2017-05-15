@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS CLASS
 (	courseID	CHAR(5)		NOT NULL,
 	courseName	VARCHAR(30) NOT NULL,
 	studentID	CHAR(7),
+    participation CHAR,
     PRIMARY KEY (courseID),
     FOREIGN KEY (studentID) REFERENCES STUDENT(studentID));
 
