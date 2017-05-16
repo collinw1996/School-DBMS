@@ -20,6 +20,8 @@
 					<input type="text" name="cname" id="cname" required="required"><br />
 					<label class="title" for="studentID">Student ID:</label>
 					<input type="text" name="studentID" id="studentID" required="required"><br />
+					<label class="title" for="participation">Participation:</label>
+					<input type="text" name="participation" id="participation" required="required"><br />
 					<input type="submit" name="add" value="INSERT" />
         </form>
 				</div>
@@ -34,6 +36,8 @@
     					<input type="text" name="cname" id="cname" required="required"><br />
     					<label class="title" for="studentID">Student ID:</label>
     					<input type="text" name="studentID" id="studentID" required="required"><br />
+							<label class="title" for="participation">Participation:</label>
+							<input type="text" name="participation" id="participation" required="required"><br />
 							<input type="submit" name="edit" value="UPDATE" />
             </form>
 						</div>
@@ -56,6 +60,7 @@
        <th>Course ID</th>
        <th>Course Name</th>
        <th>Student ID</th>
+			 <th>Participation</th>
        </tr>
 <?php
 include 'db.inc.php';
@@ -72,9 +77,10 @@ if (isset($_POST["add"])){
 $courseID = $_POST["idnumber"];
 $cname = $_POST["cname"];
 $studentID = $_POST["studentID"];
+$participation = $_POST["participation"];
 
-$query = "INSERT INTO class (courseID, courseName, studentID)
- VALUES ('$courseID', '$cname', '$studentID')";
+$query = "INSERT INTO class (courseID, courseName, studentID, participation)
+ VALUES ('$courseID', '$cname', '$studentID', '$participation')";
 
 
 if (mysql_query($query, $connection)) {
@@ -90,7 +96,7 @@ elseif (isset($_POST["edit"])) {
   $cname = $_POST["cname"];
   $studentID = $_POST["studentID"];
 
-$query = "UPDATE class SET courseName='$cname', studentID='$studentID' WHERE courseID='$courseID'";
+$query = "UPDATE class SET courseName='$cname', studentID='$studentID', participation='$participation' WHERE courseID='$courseID'";
 
 if (mysql_query($query, $connection)) {
 } else {
@@ -119,6 +125,7 @@ if (mysql_query($query, $connection)) {
     <td>{$row["courseID"]}</td>
     <td>{$row["courseName"]}</td>
     <td>{$row["studentID"]}</td>
+		<td>{$row["participation"]}</td>
     </tr>";
   ?>
 </table>

@@ -15,6 +15,7 @@
        <th>Course ID</th>
        <th>Course Name</th>
        <th>Student ID</th>
+       <th>Participation</th>
        </tr>
 <?php
 include 'db.inc.php';
@@ -36,6 +37,7 @@ if (!mysql_select_db($databaseName, $connection))
     <td>{$row["courseID"]}</td>
     <td>{$row["courseName"]}</td>
     <td>{$row["studentID"]}</td>
+    <td>{$row["participation"]}</td>
     </tr>";
   ?>
 </table>
