@@ -139,6 +139,25 @@ if (mysql_query($query, $connection)) {
     </tr>";
   ?>
 </table>
+<form action="admins_home.php" method="post">
+<p><label class="title" for="selectTable"> Select Table:</label>
+<select name="selectTable" id="selectTable">
+	<option value="" disabled selected>Select an Option</option>
+  <option value="Students">Students</option>
+  <option value="Teachers">Teachers</option>
+  <option value="Admins">Admins</option>
+  <option value="Staff">Staff</option>
+  <option value="Departments">Departments</option>
+  <option value="Classes">Classes</option>
+  <option value="Attendance">Attendance</option>
+  <option value="Grades">Grades</option>
+  <option value="Parents">Parents</option>
+  <option value="Violations">Violations</option>
+</select></p>
+<div class="submit">
+ <input type="submit" value="View" />
+</div>
+</form>
  </div>
  </body>
 </html>
