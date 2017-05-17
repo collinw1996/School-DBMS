@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php
-		require_once 'db_connect.php';
-		?>
   	<link href="css/style.css" type="text/css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/script.js" type="text/javascript"></script>
@@ -36,7 +33,7 @@
 						<option>Teacher</option>
 						<option>Student</option>
 					</select>
-	 				<input class="submit" type="submit" value="Submit" />
+	 				<input class="submit" name="submit" type="submit" value="Submit" />
 				</fieldset>
     	</form>
 		</div>

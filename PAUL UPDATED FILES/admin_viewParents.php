@@ -151,6 +151,7 @@ elseif (isset($_POST["delete"]))
 		<p><label class="title" for="selectTable"> Select Table:</label>
 			<select name="selectTable" id="selectTable">
 				<option></option>
+				<option>Back</option>
 				<option>Admin</option>
 				<option>Staff</option>
 				<option>Teacher</option>
