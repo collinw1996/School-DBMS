@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-  	<link href="css/style.css" type="text/css" rel="stylesheet" />
+  	<link href="application.css" type="text/css" rel="stylesheet" />
 		<meta charset="utf-8">
 		<title>Login</title>
 		<!-- Header information -->
@@ -12,10 +12,10 @@
 		<!--End Header -->
 		</head>
 	<body>
-		<img class="adminIcon" src="images/admin-icon.png" alt="Admin" />
+		<img class="adminIcon" src="admin-icon.png" alt="Admin" />
 	<!-- Login form field start -->
 	<div class="login">
-    <form action="login.php" method:"POST">		<!-- Change form method to post -->
+    <form action = "user.php" method = "post">		<!-- Change form method to post -->
 				<fieldset id="loginForm">
         <legend id="formHeader">Login</legend>
         	<label id="userText" for="username">Username:</label>
@@ -27,14 +27,11 @@
         	<label id="adminOption" for="adminStatus">Admin</label>
         	<input id="admin" type="radio" name="privileges" value="admin" />
 
-        	<label id="staffOption" for="staff">Staff</label>
-        	<input id="staff" type="radio" name="privileges" value="staff" />
+        	<label id="studentOption" for="student">Student</label>
+        	<input id="student" type="radio" name="privileges" value="student" />
 
         	<label id="teacherOption" for="teacher">Teacher</label>
         	<input id="teacher" type="radio" name="privileges" value="teacher" /><br />
-
-					<label id="studentOption" for="student">Student</label>
-					<input id="student" type="radio" name="privileges" value="student" /><br />
 
 	 				<input class="btn" type="submit" value="Submit" />
 				</fieldset>
