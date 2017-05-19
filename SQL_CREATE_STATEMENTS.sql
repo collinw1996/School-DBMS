@@ -67,7 +67,11 @@ CREATE TABLE IF NOT EXISTS SYSTEMADMIN
 	Fname		VARCHAR(15)			NOT NULL,
     Lname		VARCHAR(15)			NOT NULL,
 	Username	VARCHAR(25)			NOT NULL,
+<<<<<<< HEAD
 	Pass		VARCHAR(25)			NOT NULL,
+=======
+	Password	VARCHAR(25)			NOT NULL,
+>>>>>>> origin/master
     PRIMARY KEY (ID),
     UNIQUE(Username));
 
