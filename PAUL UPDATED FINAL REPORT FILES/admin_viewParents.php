@@ -125,22 +125,22 @@ elseif (isset($_POST["delete"]))
 			$row = $result->fetch_array(MYSQLI_NUM);
 			if ($j % 2 == 1) {
 				echo "<tr>
-				<td>{$row["Fname"]}</td>
-				<td>{$row["Lname"]}</td>
-				<td>{$row["Phone"]}</td>
-				<td>{$row["Address"]}</td>
-				<td>{$row["Email"]}</td>
-				<td>{$row["studentID"]}</td>
+				<td>{$row[0]}</td>
+				<td>{$row[1]}</td>
+				<td>{$row[2]}</td>
+				<td>{$row[3]}</td>
+				<td>{$row[4]}</td>
+				<td>{$row[5]}</td>
 				</tr>";
 				// This is for css to change color of even rows in table to make easier to read
 			} else {
 				echo "<tr class='even'>
-				<td>{$row["Fname"]}</td>
-				<td>{$row["Lname"]}</td>
-				<td>{$row["Phone"]}</td>
-				<td>{$row["Address"]}</td>
-				<td>{$row["Email"]}</td>
-				<td>{$row["studentID"]}</td>
+				<td>{$row[0]}</td>
+				<td>{$row[1]}</td>
+				<td>{$row[2]}</td>
+				<td>{$row[3]}</td>
+				<td>{$row[4]}</td>
+				<td>{$row[5]}</td>
 				</tr>";
 			}
 		}

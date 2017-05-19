@@ -74,7 +74,6 @@
 <?php
 require 'db_connect.php';
 // Connect to MySQL DBMS
-
 if (isset($_POST["add"])){
 	$schoolID = get_post($conn, "schoolID");
 	$courseID = get_post($conn, "courseID");
@@ -86,7 +85,6 @@ if (isset($_POST["add"])){
  $result = $conn->query($query);
  if(!$result) echo "INSERT FAILED: $query<br />" . $conn->error;
 }
-
 elseif (isset($_POST["edit"])) {
   $schoolID = $_POST["schoolID"];
 	$courseID = $_POST["courseID"];
@@ -97,13 +95,11 @@ $query = "UPDATE schooldept SET courseID='$courseID', Ssn='$ssn', ID='$id', Essn
 WHERE schoolID='$schoolID'";
 $result = $conn->query($query);
 }
-
 elseif (isset($_POST["delete"])) {
 $schoolID = $_POST["schoolID"];
 $query = "DELETE FROM schooldept WHERE schoolID=$schoolID";
 $result = $conn->query($query);
 }
-
     $query = "SELECT * FROM schooldept";
 		$result = $conn->query($query);
 		$rows = $result->num_rows;
@@ -111,7 +107,6 @@ $result = $conn->query($query);
 		{
 			$result->data_seek($j);
 			$row = $result->fetch_array(MYSQLI_NUM);
-
 			if($j % 2 == 1) {
 		    echo "<tr>
 		    <td>{$row[0]}</td>
@@ -130,33 +125,31 @@ $result = $conn->query($query);
 				</tr>";
 			}
 		}
-
 		function get_post($conn,$var) {
 			return $conn->real_escape_string($_POST[$var]);
 		}
-
   ?>
 </table>
 <form id="adminFormControl" method="POST">
-<p><label class="title" for="selectTable"> Select Table:</label>
-<select name="selectTable" id="selectTable">
-	<option></option>
-	<option>Back</option>
-  <option>Admin</option>
-	<option>Staff</option>
-  <option>Teacher</option>
-  <option>Student</option>
-  <option>Department</option>
-  <option>Classes</option>
-  <option>Attendance</option>
-  <option>Grades</option>
-  <option>Parents</option>
-  <option>Violations</option>
-</select></p>
-<div class="submit">
- <input type="submit" value="View" />
-</div>
+	<p><label class="title" for="selectTable"> Select Table:</label>
+		<select name="selectTable" id="selectTable">
+			<option></option>
+			<option>Back</option>
+		  <option>Admin</option>
+			<option>Staff</option>
+		  <option>Teacher</option>
+		  <option>Student</option>
+		  <option>Department</option>
+		  <option>Classes</option>
+		  <option>Attendance</option>
+		  <option>Grades</option>
+		  <option>Parents</option>
+		  <option>Violations</option>
+		</select></p>
+		<div class="submit">
+ 		<input type="submit" value="View" />
+		</div>
 </form>
- </div>
- </body>
+</div>
+</body>
 </html>

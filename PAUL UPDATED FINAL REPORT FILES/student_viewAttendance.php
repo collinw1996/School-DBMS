@@ -27,7 +27,7 @@ require_once 'db_connect.php';
 		for($j = 0; $j < $rows; ++$j)
 		{
 			$result->data_seek($j);
-			$rows = $result->fetch_array(MYSQLI_NUM);
+			$row = $result->fetch_array(MYSQLI_NUM);
 			if($j % 2 == 1) {
 				echo "<tr>
 				<td>{$row[0]}</td>
